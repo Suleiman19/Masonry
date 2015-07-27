@@ -12,6 +12,7 @@ import android.widget.TextView;
  * Created by Suleiman on 26-07-2015.
  */
 public class MasonryAdapter extends RecyclerView.Adapter<MasonryAdapter.MasonryView> {
+
     private Context context;
 
     int[] imgList = {R.drawable.two, R.drawable.one, R.drawable.three, R.drawable.four,
@@ -27,7 +28,7 @@ public class MasonryAdapter extends RecyclerView.Adapter<MasonryAdapter.MasonryV
 
     @Override
     public MasonryView onCreateViewHolder(ViewGroup parent, int viewType) {
-        View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_item, null);
+        View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_item, parent, false);
         MasonryView masonryView = new MasonryView(layoutView);
         return masonryView;
     }
